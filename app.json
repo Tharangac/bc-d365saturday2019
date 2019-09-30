@@ -15,10 +15,10 @@
   ],
   "dependencies": [
     {
-      "name": "Event Grid",
-      "appId": "77fc9bc4-408c-4dbb-9a51-bf39036f90b7",
+      "name": "Event Handler",
+      "appId": "2122de09-21b5-42f4-99a6-3e13b3cb339a",
       "publisher": "TharangaC",
-      "version": "1.0.0.0"
+      "version": "1.0.0.1"
     }
   ],
   "screenshots": [

@@ -34,7 +34,7 @@ page 50008 "Lot No. Information Entity_D19"
                     ApplicationArea = All;
                 }
 
-                field(macAddress; "macAddress")
+                field(macAddress; "DevicemacAddress")
                 {
                     Caption = 'macAddress';
                     ApplicationArea = All;
@@ -60,10 +60,10 @@ page 50008 "Lot No. Information Entity_D19"
     begin
         IoTDevice.SetRange(ID, DeviceID);
         if IoTDevice.FindFirst() then
-            macAddress := IoTDevice."MAC Addres";
+            DevicemacAddress := IoTDevice."MAC Addres";
     end;
 
     var
-        macAddress: Code[50];
+        DevicemacAddress: Code[50];
 
 }

@@ -4,12 +4,12 @@ codeunit 50000 "IoT Device Tempe Subs._D19"
     local procedure OnAfterCustomerModifyEvent(Rec: Record "IoT Device Tempe. Setup_D19")
     var
         JsonBuffer: Record "JSON Buffer" temporary;
+        APIEndpoint: Record "API Endpoint_EH";
         IoTDevice: Record "IoT Device_D19";
-        EventGridHandler: Codeunit "Event Grid Handler_D19";
-        JSONHelper: Codeunit "JSON Helper_D19";
+        EventGridHandler: Codeunit "Event Grid Handler_EH";
+        JSONHelper: Codeunit "JSON Helper_EH";
         JsonBody: Text;
     begin
-
         IoTDevice.Reset();
         if IoTDevice.Get(Rec."Device ID") then begin
             JSONHelper.AddValueJSONBuffer(JsonBuffer, 'macAddress', IoTDevice."MAC Addres");
@@ -22,7 +22,8 @@ codeunit 50000 "IoT Device Tempe Subs._D19"
 
             JsonBody := JSONHelper.GetJsonBodyForAzureEventGrid('EventID', 'IoTDeviceSettingsUpdate', 'IoTDeviceTemperatureSettingsUpdate', CurrentDateTime(), '1.0', JsonBuffer);
 
-            EventGridHandler.PostToEventTopic(JsonBody);
+            APIEndpoint.Get();
+            EventGridHandler.PostToAzureEventGrid(APIEndpoint.Code, JsonBody);
         end;
     end;
 }
