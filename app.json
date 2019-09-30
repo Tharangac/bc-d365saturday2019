@@ -1,0 +1,46 @@
+{
+  "id": "6942ec30-3971-463d-b091-b75b7650827d",
+  "name": "D365-2019",
+  "publisher": "TharangaC",
+  "brief": "Extension for Dynamics 365 Saturday 2019",
+  "description": "Customer Specific Functionality",
+  "version": "1.0.0.0",
+  "privacyStatement": "",
+  "EULA": "",
+  "help": "",
+  "url": "https://www.tharangac.com/",
+  "logo": "",
+  "capabilities": [
+
+  ],
+  "dependencies": [
+    {
+      "name": "Event Grid",
+      "appId": "77fc9bc4-408c-4dbb-9a51-bf39036f90b7",
+      "publisher": "TharangaC",
+      "version": "1.0.0.0"
+    }
+  ],
+  "screenshots": [
+
+  ],
+  "platform": "14.0.0.0",
+  "application": "14.0.0.0",
+  "test": "14.0.0.0",
+  "target": "Extension",
+  "idRanges": [
+    {
+      "from": 50000,
+      "to": 50099
+    }
+  ],
+  "contextSensitiveHelpUrl": "https://help.365extensions.com/?path=./$(AppShortId)/$(AppVersion)/{0}",
+  "supportedLocales": [
+    "en-NZ"
+  ],
+  "showMyCode": true,
+  "runtime": "3.0",
+  "features": [
+    "TranslationFile"
+  ]
+}
