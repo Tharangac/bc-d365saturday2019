@@ -1,2 +1,1 @@
-# bc-master
-Business Central Master
+# Dynamics 365 Saturday - IOT Solution
